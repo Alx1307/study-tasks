@@ -1,12 +1,12 @@
 class Task{
-    constructor({ id, title, object, description, deadline }) {
-        //добавить проверку на ошибки
-        
+    constructor({ id, title, object, description, priority, deadline }) {
         this.id = id;
         this.title = title;
         this.object = object;
-        this.description = description;
+        this.description = description || '';
+        this.priority = priority || 3;
         this.deadline = deadline;
+        this.createdAt = new Date();
     }
 }
 
